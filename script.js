@@ -71,6 +71,11 @@
         "You're the yummy in my tummy!",
         "Let's have a playdate forever!"
       ];
+      const bubu_sad_images = [
+        "https://media.tenor.com/lSgJHaor3IAAAAAi/bubu-onetwo.gif",
+        "https://media.tenor.com/mxFUB2neXSQAAAAj/rabbits.gif",
+        "https://media.tenor.com/qqRoBpnjOrIAAAAj/tkthao219-bubududu.gif",
+      ]
 
       yes_button.addEventListener("click", () => {
         heading.textContent ="Yay! I knew you would say yes!";
@@ -81,7 +86,8 @@
       });
 
       no_button.addEventListener("click", () => {
-        image.src = "https://media1.tenor.com/m/DJc-cO3uGCEAAAAd/bubu-yier.gif";
+        image.src = bubu_sad_images[Math.floor(Math.random() * bubu_sad_images.length)];
+        heading.textContent = "Bubu is sad now!";
         heading.textContent = phrases[Math.floor(Math.random() * phrases.length)];
         heading.style.fontSize = "30px";
         heading.style.color = "red";
