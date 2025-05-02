@@ -4,19 +4,13 @@
       const image = document.getElementById("image");
       const phrases = [
         "Pretty please?",
-        "Be my sunshine!",
-        "You're the one for me!",
-        "My heart beats for you!",
-        "Let's be cute together!",
+        "sunshine!",
+        "cutey wooty!",
+        "Sweet pea!",
+        "Snuggle bug!",
         "Pookiy pookiy!",
-        "Be mine?",
         "Dream date!",
         "Cutie pie!",
-        "Sweet like honey!",
-        "Heart eyes for you!",
-        "My valentine forever!",
-        "Butterflies in my tummy!",
-        "Totally smitten!",
         "Love bug!",
         "Snuggle buddy?",
         "Heart stealer!",
@@ -26,9 +20,6 @@
         "Sweet cheeks!",
         "Heartthrob!",
         "Love muffin!",
-        "You're magical!",
-        "My everything!",
-        "Love of my life!",
         "Sweetheart!",
         "Cuddle time?",
         "Pinky promise?",
@@ -37,24 +28,11 @@
         "Besties forever plus more?",
         "I saved you the last piece of candy!",
         "No takesy-backsies!",
-        "You're the cheese to my macaroni!",
-        "Will you hold my hand?",
         "I drew you a heart!",
         "Wanna build a pillow fort together?",
-        "You're my favorite human!",
         "Can I boop your nose?",
-        "Let's play together forever!",
         "I picked flowers just for you!",
-        "You make my heart go zoom!",
-        "Wanna trade friendship bracelets?",
-        "You're the sprinkles on my ice cream!",
-        "Can we be valentines? Circle yes or no!",
-        "I saved you a seat next to me!",
-        "Want to share my juice box?",
-        "I like you a whole bunch!",
         "Wanna watch cartoons together?",
-        "You're super duper cute!",
-        "I wrote your name in my notebook!",
         "You're my favorite playmate!",
         "Can I have a hug?",
         "Will you be in my club?",
@@ -77,12 +55,25 @@
         "https://media.tenor.com/qqRoBpnjOrIAAAAj/tkthao219-bubududu.gif",
       ]
 
+      const bubu_happy_images = [
+        "https://media.tenor.com/sOL-MDhw8W8AAAAj/happy-dance-cute.gif",
+        "https://media.tenor.com/tnkZrHghTNEAAAAj/bubu-dudu-sseeyall.gif",
+        "https://media.tenor.com/jq-K8XaaWb4AAAAj/peach-goma.gif"
+      ]
+
       yes_button.addEventListener("click", () => {
         heading.textContent ="Yay! I knew you would say yes!";
         heading.style.fontSize = "40px";
         image.src = "https://media.tenor.com/D1CAg1rBD6wAAAAi/tkthao219-bubududu.gif";
         yes_button.style.display = "none";
         no_button.style.display = "none";
+      });
+
+      yes_button.addEventListener("mouseover", () => {
+        image.src = bubu_happy_images[Math.floor(Math.random() * bubu_happy_images.length)];
+      });
+      yes_button.addEventListener("mouseout", () => {
+        image.src = bubu_sad_images[Math.floor(Math.random() * bubu_sad_images.length)];
       });
 
       no_button.addEventListener("click", () => {
