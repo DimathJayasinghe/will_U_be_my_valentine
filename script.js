@@ -62,11 +62,11 @@
       ]
 
       yes_button.addEventListener("click", () => {
+        yes_button.removeEventListener("mouseover", randomHappyImage);
+        yes_button.removeEventListener("mouseout", randomSadImage);
         heading.textContent ="Yay! I knew you would say yes!";
         heading.style.fontSize = "40px";
         image.src = "https://media.tenor.com/D1CAg1rBD6wAAAAi/tkthao219-bubududu.gif";
-        yes_button.removeEventListener("mouseover", randomHappyImage);
-        yes_button.removeEventListener("mouseout", randomSadImage);
         yes_button.style.display = "none";
         no_button.style.display = "none";
       });
