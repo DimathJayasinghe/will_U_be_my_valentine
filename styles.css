@@ -1,0 +1,58 @@
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #image{
+        width: 200px;
+      }
+      h1{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      .buttons {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 20px;
+        width: 100vw;
+        z-index: 100;
+      }
+
+      button {
+        border: none;
+        padding: 15px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px;
+      }
+      #yes_button {
+        background-color: #2fca36;
+        color: white;
+        transition: all 0.3s ease;
+      }
+      #yes_button:hover {
+        background-color: #0d8521;
+      }
+      #no_button {
+        background-color: #ff1414;
+        color: white;
+        transition: all 0.3s ease;
+      }
+      #no_button:hover {
+        background-color: #911212;
+      }
+      .hidden {
+        display: none;
+      }
