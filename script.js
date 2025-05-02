@@ -75,7 +75,7 @@
       yes_button.addEventListener("click", () => {
         heading.textContent ="Yay! I knew you would say yes!";
         heading.style.fontSize = "40px";
-        image.src = "https://media.tenor.com/UXLmgQdkDesAAAA1/robert-bri.webp";
+        image.src = "https://media.tenor.com/D1CAg1rBD6wAAAAi/tkthao219-bubududu.gif";
         yes_button.style.display = "none";
         no_button.style.display = "none";
       });
