@@ -65,16 +65,21 @@
         heading.textContent ="Yay! I knew you would say yes!";
         heading.style.fontSize = "40px";
         image.src = "https://media.tenor.com/D1CAg1rBD6wAAAAi/tkthao219-bubududu.gif";
+        yes_button.removeEventListener("mouseover", randomHappyImage);
+        yes_button.removeEventListener("mouseout", randomSadImage);
         yes_button.style.display = "none";
         no_button.style.display = "none";
       });
 
-      yes_button.addEventListener("mouseover", () => {
+      function randomHappyImage() {
         image.src = bubu_happy_images[Math.floor(Math.random() * bubu_happy_images.length)];
-      });
-      yes_button.addEventListener("mouseout", () => {
+      }
+      function randomSadImage() {
         image.src = bubu_sad_images[Math.floor(Math.random() * bubu_sad_images.length)];
-      });
+      }
+
+      yes_button.addEventListener("mouseover", randomHappyImage);
+      yes_button.addEventListener("mouseout", randomSadImage);
 
       no_button.addEventListener("click", () => {
         image.src = bubu_sad_images[Math.floor(Math.random() * bubu_sad_images.length)];
